@@ -16,6 +16,8 @@ services:
       - pgdata:/var/lib/postgresql/data
     networks:
       - laravel_dotnet_network
+    ports:
+      - "5432:5432"
 
   dotnet_api-build:
     image: mcr.microsoft.com/dotnet/sdk:8.0
