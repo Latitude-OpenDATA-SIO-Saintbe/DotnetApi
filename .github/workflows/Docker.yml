@@ -1,0 +1,56 @@
+name: Docker Compose PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
+
+    - name: Cache Docker layers
+      uses: actions/cache@v3
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-docker-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-docker-
+
+    - name: Set up Docker Compose
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y docker-compose
+
+    - name: Run Docker Compose to validate
+      run: |
+        docker-compose -f ./infra/docker-compose-test.yml up -d
+        docker-compose -f ./infra/docker-compose-test.yml ps
+
+    - name: Wait for the database to be ready
+      run: |
+        echo "Waiting for the database to be ready..."
+        until docker-compose exec -T db pg_isready -U user -d laravel; do
+          echo "Waiting for database..."
+          sleep 5
+        done
+
+    - name: Run Dotnet Migrations
+      run: |
+        
+
+    - name: Run Dotnet Tests
+      run: |
+        docker-compose exec -T dotnet_api dotnet test
+
+    - name: Stop Docker containers
+      if: always()
+      run: |
+        docker-compose -f ./infra/docker-compose-test.yml down
