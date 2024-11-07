@@ -20,3 +20,5 @@ echo "Running database setup script..."
 bash /setupDB/setup-py.sh
 
 echo "All tasks completed successfully."
+
+echo "you can now ether do dotnet run to view application or you can do dotnet test to test the application" 
