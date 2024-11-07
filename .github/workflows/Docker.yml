@@ -48,7 +48,7 @@ jobs:
 
     - name: Run Dotnet Tests
       run: |
-        docker-compose exec -T dotnet_api dotnet test
+        docker-compose exec -T dotnet_api cd ./Metheo.Tests dotnet test
 
     - name: Stop Docker containers
       if: always()
