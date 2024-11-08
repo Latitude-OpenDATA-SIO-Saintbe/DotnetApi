@@ -45,3 +45,6 @@ services:
     networks:
       - laravel_dotnet_network
     command: ["dotnet", "/app/publish/Metheo.Api.dll"]
+
+volumes:
+  pgdata:
