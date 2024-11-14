@@ -3,7 +3,7 @@ namespace Metheo.Tools;
 public class Api
 {
     // Helper method to generate the API URL
-    public static string GenerateApiUrl(DateTime startDate, DateTime endDate, string position, string? category = null)
+    public static string GenerateApiUrl(DateTime startDate, DateTime endDate, float latitude, float longitude, string? category = null)
     {
         var baseUrl = "https://api.open-meteo.com/v1/forecast?";
         var queryParams = new List<string>
@@ -11,8 +11,8 @@ public class Api
             $"start_date={startDate:yyyy-MM-dd}",
             $"end_date={endDate:yyyy-MM-dd}",
         };
-        
-        var coordinates = Position.RetrievePosition(position);
+
+        var coordinates = Position.RetrievePosition(latitude, longitude);
         queryParams.Add($"latitude={coordinates.lat}");
         queryParams.Add($"longitude={coordinates.lon}");
 

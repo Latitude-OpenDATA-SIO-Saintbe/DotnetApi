@@ -26,6 +26,7 @@ public static class DateUtils
             else if (Regex.IsMatch(date, @"^\d{2}-\d{2}-\d{4}$")) // Matches "25-03-2024"
             {
                 startDate = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
+                endDate = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
             }
             else if (Regex.IsMatch(date, @"^\d{4}:\d{4}$")) // Matches "2025:2026"
             {

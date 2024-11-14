@@ -1,17 +1,16 @@
-namespace Metheo.Tools;
-
-public class Position
+namespace Metheo.Tools
 {
-    public static (double lat, double lon) RetrievePosition(string position)
+    public class Position
     {
-        var coordinates = position.Split(',');
-        if (coordinates.Length != 2 ||
-            !double.TryParse(coordinates[0], out double lat) ||
-            !double.TryParse(coordinates[1], out double lon))
+        public static (double lat, double lon) RetrievePosition(double Latitude, double Longitude)
         {
-            throw new ArgumentException("Invalid position format. Expected 'latitude,longitude'.");
+            if (double.IsNaN(Latitude) || double.IsNaN(Longitude) ||
+                Latitude < -90 || Latitude > 90 || Longitude < -180 || Longitude > 180)
+            {
+                throw new ArgumentOutOfRangeException("Invalid latitude or longitude value.");
+            }
+
+            return (Latitude, Longitude);
         }
-        
-        return (lat, lon);
     }
 }

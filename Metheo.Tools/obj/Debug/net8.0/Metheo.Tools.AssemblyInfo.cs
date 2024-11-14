@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Metheo.Tools")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8adb3135161f228b627a65a720f513bf5d791dee")]
 [assembly: System.Reflection.AssemblyProductAttribute("Metheo.Tools")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Metheo.Tools")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
