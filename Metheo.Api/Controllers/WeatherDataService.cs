@@ -1,4 +1,3 @@
-using Microsoft.VisualBasic.CompilerServices;
 namespace Metheo.Api.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +8,8 @@ using Npgsql;
 using System.Net.Http;
 using System.Text.Json;
 using Metheo.Tools;
+using Microsoft.AspNetCore.Authorization;
+
 
 /// <summary>
 /// WeatherController provides endpoints to retrieve weather data, city information, and category types.
@@ -30,6 +31,7 @@ public class WeatherController : ControllerBase
     /// <summary>
     /// Retrieves the list of category types (column names) from the WeatherDatas table.
     /// </summary>
+    [Authorize(Policy = "CanViewData")]
     [HttpGet("categoriestypes")]
     public async Task<ActionResult<IEnumerable<string>>> GetCategoryTypes()
     {
@@ -39,6 +41,7 @@ public class WeatherController : ControllerBase
         {
             await connection.OpenAsync();
 
+            // Get the column names from the WeatherDatas table
             using (var command = new NpgsqlCommand(@"
                 SELECT column_name
                 FROM information_schema.columns
@@ -57,20 +60,36 @@ public class WeatherController : ControllerBase
         return Ok(columnNames);
     }
 
+    /// <summary>
+    /// Retrieves the list of cities and departement from the Db
+    /// <summary>
+    [Authorize(Policy = "CanViewData")]
     [HttpGet("city")]
     public async Task<ActionResult<IEnumerable<object>>> GetCities()
     {
+        // Retrieve the list of unique city names from the WeatherDatas table
         var cities = await _context.Cities.ToListAsync();
+        // Return the list of unique departements names
         var departments = await _context.Departements.ToListAsync();
         var combinedList = new List<object>();
         combinedList.AddRange(cities);
         combinedList.AddRange(departments);
+        // Return the list of both
         return Ok(combinedList);
     }
 
+    /// <summary>
+    /// Retrieves metheo information from the Db based on the input
+    /// </summary>
+    /// <param name="dateRange"></param>
+    /// <param name="city"></param>
+    /// <param name="category"></param>
+    /// <returns>{json} like WheatherData</returns>
+    [Authorize(Policy = "CanViewData")]
     [HttpGet("{dateRange}/{city?}/{category?}")]
     public async Task<ActionResult<IEnumerable<WeatherData>>> GetWeatherData(string dateRange, string? city = null, string? category = null)
     {
+        // check if not null
         if (string.IsNullOrWhiteSpace(dateRange))
         {
             return BadRequest("Date range cannot be empty.");
@@ -81,6 +100,7 @@ public class WeatherController : ControllerBase
 
         try
         {
+            // retrieve the start date and the end date if possible
             var (start, end) = DateUtils.GetDateRange(dateRange);
             startDate = DateTime.SpecifyKind(start, DateTimeKind.Utc);
             endDate = end.HasValue ? DateTime.SpecifyKind(end.Value, DateTimeKind.Utc) : (DateTime?)null;
@@ -90,17 +110,20 @@ public class WeatherController : ControllerBase
             return BadRequest("Invalid date range format. Use 'YYYY-MM-DD to YYYY-MM-DD'.");
         }
 
+        // creation of a part of dynamic query with the date range
         var query = _context.WeatherDatas.AsQueryable()
             .Where(wd => wd.Timestamp >= startDate &&
                         (endDate == null || wd.Timestamp <= endDate));
 
         if (city == "France")
         {
+            // if the city is France, we need to get all at least the 3 closest metheo station for each departement
             var franceWeatherData = await GetFranceWeatherDataByDepartment(startDate, endDate, category);
             return franceWeatherData.Any() ? Ok(franceWeatherData) : NotFound("No weather data available for France.");
         }
 
-        var result = await GetGlobalWeatherData(city, startDate, endDate, category);
+        // if the city is not France, we need to get the meteo station for this city or depatement (3 closest wheather station)
+        var result = await GetGlobalWeatherData (city, startDate, endDate, category);
         return result ?? StatusCode((int)HttpStatusCode.InternalServerError, "Error fetching weather data");
     }
 
@@ -130,37 +153,59 @@ public class WeatherController : ControllerBase
 
 
 
-
+    /// <summary>
+    /// This method is used to get the weather data for a specific city or department in France.
+    /// </summary>
+    /// <param name="city"></param>
+    /// <param name="startDate"></param>
+    /// <param name="endDate"></param>
+    /// <param name="category"></param>
+    /// <returns> Weather data for the specified city or department in France.</returns>
     private async Task<ActionResult<IEnumerable<WeatherData>>> GetGlobalWeatherData(
         string? city, DateTime startDate, DateTime? endDate, string? category)
     {
-
+        // creation of a part of dynamic query with the date range
         var query = _context.WeatherDatas.AsQueryable()
             .Where(wd => wd.Timestamp >= startDate && (endDate == null || wd.Timestamp <= endDate));
+        // Get the id of the meteo station for this city or department (3 closest wheather station)
         var nearestStations = await GetNearestStationsIfCitySpecified(city);
         if (!nearestStations.Any() && city != null)
             return NotFound("No nearby weather stations found.");
         if (nearestStations.Any())
+            // Add the id of the meteo station to the query
             query = query.Where(wd => nearestStations.Select(ns => ns.Id).Contains(wd.WeatherStationId));
 
+        // call the apply category filter to add the category to the query
         query = ApplyCategoryFilter(query, category);
 
+        // call GetWeatherDataFromDatabase to get the weather data from the database based on the query
         var weatherData = await GetWeatherDataFromDatabase(query);
         if (weatherData != null)
             return Ok(weatherData);
 
+        // if no data is found, fetch from api and return either the data or error 404
         var apiWeatherData = await FetchAndStoreApiDataIfNecessary(nearestStations, startDate, endDate, category);
         return apiWeatherData != null ? Ok(apiWeatherData) : null;
     }
 
+    /// <summary>
+    /// This method is used to get the weather data for France
+    /// </summary>
+    /// <param name="startDate"></param>
+    /// <param name="endDate"></param>
+    /// <param name="category"></param>
+    /// <returns> Weather data for France.</returns>
     private async Task<IEnumerable<WeatherData>> GetFranceWeatherDataByDepartment(
         DateTime startDate, DateTime? endDate, string? category)
     {
         var franceWeatherData = new List<WeatherData>();
+        // Get all the departments of France
         var departments = await _context.Departements.ToListAsync();
 
+        // For each department, get the weather data
         foreach (var department in departments)
         {
+            // Get the id of the meteo station for this department (3 closest wheather station)
             var nearestStations = await GetNearestWeatherStations(department.Latitude, department.Longitude, 3);
 
             if (!nearestStations.Any())
@@ -175,6 +220,7 @@ public class WeatherController : ControllerBase
             // Apply category filter if specified
             departmentData = ApplyCategoryFilter(departmentData, category);
 
+            // Retrieve wheather data from database based on query
             var weatherData = await GetWeatherDataFromDatabase(departmentData);
 
             // If data is available, add it to franceWeatherData
@@ -196,21 +242,38 @@ public class WeatherController : ControllerBase
         return franceWeatherData;
     }
 
+    /// <summary>
+    /// Fetches weather data from the DB based on query
+    /// </summary>
+    /// <param name="query"></param>
+    /// <returns> Weather data from the database</returns>
     private async Task<List<WeatherData>?> GetWeatherDataFromDatabase(IQueryable<WeatherData> query)
     {
         // console log query
         var queryLog = query.ToString();
 
         Console.WriteLine("Executing query: {0}", queryLog);
+        // execute query and return results
         var weatherData = await query.ToListAsync();
         return weatherData.Any() ? weatherData : null;
     }
 
+    /// <summary>
+    /// return get nearest stations if exist else return empty list
+    /// </summary>
+    /// <param name="city"></param>
+    /// <returns> List of nearest stations</returns>
     private async Task<List<WeatherStation>> GetNearestStationsIfCitySpecified(string? city)
     {
         return city != null ? await GetNearestStations(city) : new List<WeatherStation>();
     }
 
+    /// <summary>
+    /// methode to apply filter on weather data query
+    /// </summary>
+    /// <param name="query"></param>
+    /// <param name="category"></param>
+    /// <returns> filtered query</returns>
     private IQueryable<WeatherData> ApplyCategoryFilter(IQueryable<WeatherData> query, string? category)
     {
         if (string.IsNullOrEmpty(category))
@@ -315,13 +378,24 @@ public class WeatherController : ControllerBase
         return query;
     }
 
+    /// <summary>
+    /// This method is used to get the weather data for a specific weather station.
+    /// From the Api, if the record exist, it will add it to db
+    /// </summary>
+    /// <param name="nearestStations"></param>
+    /// <param name="startDate"></param>
+    /// <param name="endDate"></param>
+    /// <param name="category"></param>
+    /// <returns>weather data</returns>
     private async Task<List<WeatherData>?> FetchAndStoreApiDataIfNecessary(
         List<WeatherStation> nearestStations, DateTime startDate, DateTime? endDate, string? category)
     {
         if (!nearestStations.Any()) return null;
 
+        // store latitude and longitude of the nearest stations
         float latitude = nearestStations.First().Latitude;
         float longitude = nearestStations.First().Longitude;
+        // call the api to get the weather data
         List<WeatherData>? openMeteoData = [await FetchWeatherDataFromApi(startDate, endDate ?? startDate, latitude, longitude, category)];
         if (openMeteoData == null) return null;
 
@@ -374,6 +448,11 @@ public class WeatherController : ControllerBase
         return columnNames;
     }
 
+    /// <summary>
+    /// get nearest wheather station
+    /// </summary>
+    /// <param name="city"></param>
+    /// <returns></returns>
     private async Task<List<WeatherStation>> GetNearestStations(string? city)
     {
         var nearestStations = new HashSet<WeatherStation>();
@@ -429,20 +508,39 @@ public class WeatherController : ControllerBase
         return distances;
     }
 
+    /// <summary>
+    /// check if daterange is younger than 7 days
+    /// </summary>
+    /// <param name="startDate"></param>
+    /// <param name="endDate"></param>
+    /// <returns></returns>
     private bool IsRecentDateRange(DateTime startDate, DateTime? endDate)
     {
         return startDate >= DateTime.UtcNow.AddDays(-7) ||
                (endDate.HasValue && endDate.Value >= DateTime.UtcNow.AddDays(-7));
     }
 
+    /// <summary>
+    /// Fetch data from Api
+    /// </summary>
+    /// <param name="startDate"></param>
+    /// <param name="endDate"></param>
+    /// <param name="latitude"></param>
+    /// <param name="longitude"></param>
+    /// <param name="category"></param>
+    /// <returns>wheather data</returns>
     private async Task<WeatherData?> FetchWeatherDataFromApi(DateTime startDate, DateTime endDate, float latitude, float longitude, string? category = null)
     {
+        // get api url
         var apiUrl = Api.GenerateApiUrl(startDate, endDate, latitude, longitude, category);
 
+        // launch instance of HttpClient
         using var httpClient = new HttpClient();
+        // get response
         var response = await httpClient.GetAsync(apiUrl);
         if (response.IsSuccessStatusCode)
         {
+            // get data
             var jsonResponse = await response.Content.ReadAsStringAsync();
             return JsonSerializer.Deserialize<WeatherData>(jsonResponse);
         }

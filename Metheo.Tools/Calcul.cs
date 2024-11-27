@@ -1,7 +1,18 @@
+/// <summary>
+/// Provides methods for various calculations.
+/// </summary>
 namespace Metheo.Tools
 {
     public class Calcul
     {
+        /// <summary>
+        /// Calculates the Haversine distance between two points on the Earth's surface specified by latitude and longitude.
+        /// </summary>
+        /// <param name="lat1">Latitude of the first point in degrees.</param>
+        /// <param name="lon1">Longitude of the first point in degrees.</param>
+        /// <param name="lat2">Latitude of the second point in degrees.</param>
+        /// <param name="lon2">Longitude of the second point in degrees.</param>
+        /// <returns>The Haversine distance between the two points in kilometers.</returns>
         public static double CalculateHaversineDistance(double lat1, double lon1, double lat2, double lon2)
         {
             const double R = 6371; // Radius of the Earth in kilometers

@@ -4,8 +4,32 @@ using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
+/// <summary>
+/// Provides utility methods for handling date ranges.
+/// </summary>
 public static class DateUtils
 {
+    /// <summary>
+    /// Parses a date string and returns a tuple containing the start date and an optional end date.
+    /// </summary>
+    /// <param name="date">The date string to parse. Supported formats include:
+    /// <list type="bullet">
+    /// <item><description>YYYY (e.g., "2024")</description></item>
+    /// <item><description>MM-YYYY (e.g., "03-2024")</description></item>
+    /// <item><description>DD-MM-YYYY (e.g., "25-03-2024")</description></item>
+    /// <item><description>YYYY:YYYY (e.g., "2025:2026")</description></item>
+    /// <item><description>MM-YYYY:MM-YYYY (e.g., "03-2025:02-2026")</description></item>
+    /// <item><description>DD-MM-YYYY:DD-MM-YYYY (e.g., "01-02-2024:08-03-2024")</description></item>
+    /// <item><description>DD-MM-YYYY:YYYY (e.g., "01-02-2024:2024")</description></item>
+    /// <item><description>YYYY:DD-MM-YYYY (e.g., "2024:01-03-2024")</description></item>
+    /// <item><description>MM-YYYY:DD-MM-YYYY (e.g., "02-2024:01-03-2024")</description></item>
+    /// <item><description>DD-MM-YYYY:MM-YYYY (e.g., "01-02-2024:03-2024")</description></item>
+    /// <item><description>YYYY:MM-YYYY (e.g., "2024:03-2024")</description></item>
+    /// <item><description>MM-YYYY:YYYY (e.g., "03-2024:2024")</description></item>
+    /// </list>
+    /// </param>
+    /// <returns>A tuple containing the start date and an optional end date.</returns>
+    /// <exception cref="FormatException">Thrown when the date string is in an invalid format.</exception>
     public static (DateTime startDate, DateTime? endDate) GetDateRange(string date)
     {
         DateTime startDate;
