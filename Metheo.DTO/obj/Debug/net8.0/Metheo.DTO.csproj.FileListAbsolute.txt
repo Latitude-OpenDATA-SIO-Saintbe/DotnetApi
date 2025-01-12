@@ -1,0 +1,11 @@
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/bin/Debug/net8.0/Metheo.DTO.deps.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/bin/Debug/net8.0/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/bin/Debug/net8.0/Metheo.DTO.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/Metheo.DTO.GeneratedMSBuildEditorConfig.editorconfig
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/Metheo.DTO.AssemblyInfoInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/Metheo.DTO.AssemblyInfo.cs
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/Metheo.DTO.csproj.CoreCompileInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/refint/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/Metheo.DTO.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/ref/Metheo.DTO.dll

@@ -1,0 +1,17 @@
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/Metheo.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/Metheo.DAL.AssemblyInfoInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/Metheo.DAL.AssemblyInfo.cs
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/Metheo.DAL.csproj.CoreCompileInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/bin/Debug/net8.0/Metheo.DAL.deps.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/bin/Debug/net8.0/Metheo.DAL.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/bin/Debug/net8.0/Metheo.DAL.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/bin/Debug/net8.0/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/bin/Debug/net8.0/Metheo.DTO.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/Metheo.DAL.csproj.AssemblyReference.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/Metheo.DAL.csproj.Up2Date
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/Metheo.DAL.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/refint/Metheo.DAL.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/Metheo.DAL.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/Debug/net8.0/ref/Metheo.DAL.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/bin/Debug/net8.0/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/bin/Debug/net8.0/Metheo.Tools.pdb
