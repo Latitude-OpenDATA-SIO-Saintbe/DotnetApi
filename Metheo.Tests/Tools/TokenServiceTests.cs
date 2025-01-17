@@ -1,11 +1,8 @@
-﻿namespace Metheo.Tests.Tools;
-
-using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using Xunit;
 using Metheo.Tools;
+
+namespace Metheo.Tests.Tools;
 
 public class TokenServiceTests
 {
@@ -22,8 +19,8 @@ public class TokenServiceTests
         // Arrange
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, "testuser"),
-            new Claim(ClaimTypes.Role, "Admin")
+            new(ClaimTypes.Name, "testuser"),
+            new(ClaimTypes.Role, "Admin")
         };
 
         // Act
@@ -40,8 +37,8 @@ public class TokenServiceTests
         // Arrange
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, "testuser"),
-            new Claim(ClaimTypes.Role, "Admin")
+            new(ClaimTypes.Name, "testuser"),
+            new(ClaimTypes.Role, "Admin")
         };
 
         // Act
@@ -60,8 +57,8 @@ public class TokenServiceTests
         // Arrange
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, "testuser"),
-            new Claim(ClaimTypes.Role, "Admin")
+            new(ClaimTypes.Name, "testuser"),
+            new(ClaimTypes.Role, "Admin")
         };
 
         // Act

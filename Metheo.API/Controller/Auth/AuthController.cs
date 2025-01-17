@@ -1,33 +1,28 @@
 using Metheo.BL;
 using Metheo.DTO;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
-namespace Metheo.Api.Controllers
+namespace ApiDotnetMetheoOrm.Controller.Auth;
+
+[Route("api/auth")]
+[ApiController]
+public class AuthController : ControllerBase
 {
-    [Route("api/auth")]
-    [ApiController]
-    public class AuthController : ControllerBase
+    private readonly IAuthBusinessLogic _authBusinessLogic;
+
+    public AuthController(IAuthBusinessLogic authBusinessLogic)
     {
-        private readonly IAuthBusinessLogic _authBusinessLogic;
+        _authBusinessLogic = authBusinessLogic;
+    }
 
-        public AuthController(IAuthBusinessLogic authBusinessLogic)
-        {
-            _authBusinessLogic = authBusinessLogic;
-        }
-        
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginRequest? loginRequest)
+    {
+        if (loginRequest == null || string.IsNullOrEmpty(loginRequest.Email) ||
+            string.IsNullOrEmpty(loginRequest.Password)) return BadRequest();
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
-        {
-            var token = await _authBusinessLogic.LoginAsync(loginRequest);
+        var token = await _authBusinessLogic.LoginAsync(loginRequest);
 
-            if (token == null)
-            {
-                return Unauthorized("Invalid credentials.");
-            }
-
-            return Ok(new { Token = token });
-        }
+        return Ok(new { Token = token });
     }
 }

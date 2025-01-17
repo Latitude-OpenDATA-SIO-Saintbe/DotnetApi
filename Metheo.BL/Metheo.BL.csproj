@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
-      <ProjectReference Include="..\Metheo.DTO\Metheo.DTO.csproj" />
-      <ProjectReference Include="..\Metheo.DAL\Metheo.DAL.csproj" />
-      <ProjectReference Include="..\Metheo.Tools\Metheo.Tools.csproj" />
+        <ProjectReference Include="..\Metheo.DTO\Metheo.DTO.csproj"/>
+        <ProjectReference Include="..\Metheo.DAL\Metheo.DAL.csproj"/>
+        <ProjectReference Include="..\Metheo.Tools\Metheo.Tools.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-      <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="9.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Primitives" Version="9.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5"/>
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Primitives" Version="9.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="Microsoft.Extensions.Caching.Abstractions">
-        <HintPath>..\..\..\..\..\..\..\..\.nuget\packages\microsoft.extensions.caching.abstractions\9.0.0\lib\net8.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
-      </Reference>
+        <Reference Include="Microsoft.Extensions.Caching.Abstractions">
+            <HintPath>..\..\..\..\..\..\..\..\.nuget\packages\microsoft.extensions.caching.abstractions\9.0.0\lib\net8.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
     <PropertyGroup>

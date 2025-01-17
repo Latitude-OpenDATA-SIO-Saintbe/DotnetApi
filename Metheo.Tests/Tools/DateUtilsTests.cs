@@ -1,8 +1,6 @@
-﻿namespace Metheo.Tests.Tools;
+﻿using Metheo.Tools;
 
-using System;
-using Xunit;
-using Metheo.Tools;
+namespace Metheo.Tests.Tools;
 
 public class DateUtilsTests
 {
@@ -18,6 +16,8 @@ public class DateUtilsTests
     [InlineData("01-2023:31-01-2024", "2023-01-01", "2024-01-31")]
     [InlineData("01-01-2023:01-2024", "2023-01-01", "2024-01-31")]
     [InlineData("2023:01-2024", "2023-01-01", "2024-01-31")]
+    [InlineData("01-2023:2024", "2023-01-01", "2024-12-31")]
+    [InlineData("12-2022:2023", "2022-12-01", "2023-12-31")]
     public void TryParseDateRange_ValidDateRange_ReturnsTrue(string dateRange, string expectedStart, string expectedEnd)
     {
         // Act

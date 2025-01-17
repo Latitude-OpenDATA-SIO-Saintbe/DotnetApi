@@ -1,12 +1,10 @@
-﻿namespace Metheo.Tools;
-
-using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text.RegularExpressions;
 
+namespace Metheo.Tools;
+
 /// <summary>
-/// Provides utility methods for handling date ranges.
+///     Provides utility methods for handling date ranges.
 /// </summary>
 public static class DateUtils
 {
@@ -26,9 +24,9 @@ public static class DateUtils
         { @"^\d{4}:\d{2}-\d{4}$", ParseYearToMonthYear },
         { @"^\d{2}-\d{4}:\d{4}$", ParseMonthYearToYear }
     };
-    
+
     /// <summary>
-    /// Parses a date string and returns a tuple containing the start date and an optional end date.
+    ///     Parses a date string and returns a tuple containing the start date and an optional end date.
     /// </summary>
     /// <param name="date">The date string to parse.</param>
     /// <returns>A tuple containing the start date and an optional end date.</returns>
@@ -42,9 +40,7 @@ public static class DateUtils
             return false;
 
         foreach (var parser in DateParsers)
-        {
             if (Regex.IsMatch(dateRange, parser.Key))
-            {
                 try
                 {
                     (startDate, endDate) = parser.Value(dateRange);
@@ -54,24 +50,22 @@ public static class DateUtils
                 {
                     // Ignore exceptions and continue to the next parser
                 }
-            }
-        }
 
         return false;
     }
-    
+
     // Parsing methods for specific formats
     private static (DateTime, DateTime?) ParseYear(string date)
     {
-        int year = int.Parse(date);
+        var year = int.Parse(date);
         return (new DateTime(year, 1, 1), new DateTime(year, 12, 31));
     }
 
     private static (DateTime, DateTime?) ParseMonthYear(string date)
     {
         var parts = date.Split('-');
-        int month = int.Parse(parts[0]);
-        int year = int.Parse(parts[1]);
+        var month = int.Parse(parts[0]);
+        var year = int.Parse(parts[1]);
         return (new DateTime(year, month, 1), new DateTime(year, month, DateTime.DaysInMonth(year, month)));
     }
 
@@ -93,7 +87,8 @@ public static class DateUtils
         var startParts = parts[0].Split('-');
         var endParts = parts[1].Split('-');
         var startDate = new DateTime(int.Parse(startParts[1]), int.Parse(startParts[0]), 1);
-        var endDate = new DateTime(int.Parse(endParts[1]), int.Parse(endParts[0]), DateTime.DaysInMonth(int.Parse(endParts[1]), int.Parse(endParts[0])));
+        var endDate = new DateTime(int.Parse(endParts[1]), int.Parse(endParts[0]),
+            DateTime.DaysInMonth(int.Parse(endParts[1]), int.Parse(endParts[0])));
         return (startDate, endDate);
     }
 
@@ -135,7 +130,8 @@ public static class DateUtils
         var parts = date.Split(':');
         var startDate = DateTime.ParseExact(parts[0], "dd-MM-yyyy", CultureInfo.InvariantCulture);
         var endParts = parts[1].Split('-');
-        var endDate = new DateTime(int.Parse(endParts[1]), int.Parse(endParts[0]), DateTime.DaysInMonth(int.Parse(endParts[1]), int.Parse(endParts[0])));
+        var endDate = new DateTime(int.Parse(endParts[1]), int.Parse(endParts[0]),
+            DateTime.DaysInMonth(int.Parse(endParts[1]), int.Parse(endParts[0])));
         return (startDate, endDate);
     }
 
@@ -144,7 +140,8 @@ public static class DateUtils
         var parts = date.Split(':');
         var startDate = new DateTime(int.Parse(parts[0]), 1, 1);
         var endParts = parts[1].Split('-');
-        var endDate = new DateTime(int.Parse(endParts[1]), int.Parse(endParts[0]), DateTime.DaysInMonth(int.Parse(endParts[1]), int.Parse(endParts[0])));
+        var endDate = new DateTime(int.Parse(endParts[1]), int.Parse(endParts[0]),
+            DateTime.DaysInMonth(int.Parse(endParts[1]), int.Parse(endParts[0])));
         return (startDate, endDate);
     }
 

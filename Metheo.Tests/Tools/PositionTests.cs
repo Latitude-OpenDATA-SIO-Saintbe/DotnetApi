@@ -1,8 +1,6 @@
-﻿namespace Metheo.Tests.Tools;
+﻿using Metheo.Tools;
 
-using System;
-using Xunit;
-using Metheo.Tools;
+namespace Metheo.Tests.Tools;
 
 public class PositionTests
 {
@@ -10,8 +8,8 @@ public class PositionTests
     public void RetrievePosition_ValidCoordinates_ReturnsCorrectPosition()
     {
         // Arrange
-        double latitude = 52.5200; // Berlin
-        double longitude = 13.4050;
+        var latitude = 52.5200; // Berlin
+        var longitude = 13.4050;
 
         // Act
         var result = Position.RetrievePosition(latitude, longitude);

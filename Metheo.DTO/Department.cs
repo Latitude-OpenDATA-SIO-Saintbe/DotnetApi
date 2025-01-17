@@ -7,8 +7,4 @@ public class Department
     public string Name { get; set; }
     public float Latitude { get; set; }
     public float Longitude { get; set; }
-    public string Numero { get; set; }
 }
-
-// clauses de no concurence
-// clauses de mobilité

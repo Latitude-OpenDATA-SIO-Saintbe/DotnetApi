@@ -1,6 +1,9 @@
+using System.IO.Compression;
 using System.Net;
-using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 using Metheo.BL;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ApiDotnetMetheoOrm.Controller;
 
@@ -15,7 +18,7 @@ public class WeatherController : ControllerBase
         _weatherService = weatherService;
     }
 
-    // [Authorize(Policy = "Admin")]
+    [Authorize(Policy = "CanViewData")]
     [HttpGet("categoriestypes")]
     public async Task<ActionResult<IEnumerable<string>>> GetCategoryTypes()
     {
@@ -23,7 +26,7 @@ public class WeatherController : ControllerBase
         return Ok(categoryTypes.Select(c => c.Name)); // Just column names
     }
 
-    // [Authorize(Policy = "Admin")]
+    [Authorize(Policy = "CanViewData")]
     [HttpGet("search/{searchCity}")]
     public async Task<ActionResult<IEnumerable<object>>> PostCities(string searchCity)
     {
@@ -31,22 +34,36 @@ public class WeatherController : ControllerBase
         return Ok(citiesAndDepartments);
     }
 
-    // [Authorize(Policy = "Admin")]
+    [Authorize(Policy = "CanViewData")]
     [HttpGet("city/{city}")]
     public async Task<ActionResult<object>> GetCityPosition(string city)
     {
         var position = await _weatherService.GetCityOrDepartmentPositionAsync(city);
-        return Ok(position);
+
+        if (position == null) return NotFound(); // Return NotFound if position is null
+
+        return Ok(position); // Return Ok with the position if found
     }
-    
-    // [Authorize(Policy = "CanViewData")]
+
+    [Authorize(Policy = "CanViewData")]
     [HttpGet("search/{dateRange}/{latitude?}/{longitude?}/{category?}")]
-    public async Task<IActionResult> GetWeatherData(string dateRange, string latitude, string longitude, string? category = null)
+    public async Task<IActionResult> GetWeatherData(string dateRange, string latitude, string longitude,
+        string? category = null)
     {
         try
         {
             var weatherData = await _weatherService.GetWeatherData(dateRange, latitude, longitude, category);
-            return Ok(weatherData);
+
+            // Compress the data
+            using var memoryStream = new MemoryStream();
+            using (var gzipStream = new GZipStream(memoryStream, CompressionMode.Compress, leaveOpen: true))
+            {
+                await JsonSerializer.SerializeAsync(gzipStream, weatherData);
+            }
+
+            // offset
+            memoryStream.Seek(0, SeekOrigin.Begin);
+            return File(memoryStream.ToArray(), "application/gzip");
         }
         catch (ArgumentException ex)
         {
@@ -54,7 +71,8 @@ public class WeatherController : ControllerBase
         }
         catch (Exception)
         {
-            return StatusCode((int)HttpStatusCode.InternalServerError, "An error occurred while retrieving weather data.");
+            return StatusCode((int)HttpStatusCode.InternalServerError,
+                "An error occurred while retrieving weather data.");
         }
     }
 }

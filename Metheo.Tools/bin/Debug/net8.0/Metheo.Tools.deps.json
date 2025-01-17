@@ -9,6 +9,7 @@
       "Metheo.Tools/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
+          "Metheo.DTO": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "8.3.0"
         },
         "runtime": {
@@ -75,6 +76,14 @@
             "fileVersion": "8.3.0.51204"
           }
         }
+      },
+      "Metheo.DTO/1.0.0": {
+        "runtime": {
+          "Metheo.DTO.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -125,6 +134,11 @@
       "sha512": "sha512-9GESpDG0Zb17HD5mBW/uEWi2yz/uKPmCthX2UhyLnk42moGH2FpMgXA2Y4l2Qc7P75eXSUTA6wb/c9D9GSVkzw==",
       "path": "system.identitymodel.tokens.jwt/8.3.0",
       "hashPath": "system.identitymodel.tokens.jwt.8.3.0.nupkg.sha512"
+    },
+    "Metheo.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

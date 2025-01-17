@@ -1,42 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.API\\Metheo.API.csproj": {}
+    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/Metheo.API.csproj": {}
   },
   "projects": {
-    "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.API\\Metheo.API.csproj": {
+    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/Metheo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.API\\Metheo.API.csproj",
+        "projectUniqueName": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/Metheo.API.csproj",
         "projectName": "Metheo.API",
-        "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.API\\Metheo.API.csproj",
-        "packagesPath": "C:\\Users\\Clement\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.API\\obj\\",
+        "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/Metheo.API.csproj",
+        "packagesPath": "/home/mirage/.nuget/packages/",
+        "outputPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Clement\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/mirage/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.BL\\Metheo.BL.csproj": {
-                "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.BL\\Metheo.BL.csproj"
+              "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/Metheo.BL.csproj": {
+                "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/Metheo.BL.csproj"
               },
-              "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj": {
-                "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj"
+              "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {
+                "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj"
               }
             }
           }
@@ -59,6 +53,14 @@
             "AspNetCoreRateLimit": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -100,46 +102,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/nix/store/wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.BL\\Metheo.BL.csproj": {
+    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/Metheo.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.BL\\Metheo.BL.csproj",
+        "projectUniqueName": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/Metheo.BL.csproj",
         "projectName": "Metheo.BL",
-        "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.BL\\Metheo.BL.csproj",
-        "packagesPath": "C:\\Users\\Clement\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.BL\\obj\\",
+        "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/Metheo.BL.csproj",
+        "packagesPath": "/home/mirage/.nuget/packages/",
+        "outputPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Clement\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/mirage/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DAL\\Metheo.DAL.csproj": {
-                "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DAL\\Metheo.DAL.csproj"
+              "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/Metheo.DAL.csproj": {
+                "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/Metheo.DAL.csproj"
               },
-              "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj": {
-                "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj"
+              "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {
+                "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj"
               },
-              "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.Tools\\Metheo.Tools.csproj": {
-                "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.Tools\\Metheo.Tools.csproj"
+              "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/Metheo.Tools.csproj": {
+                "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/Metheo.Tools.csproj"
               }
             }
           }
@@ -188,43 +184,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/nix/store/wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DAL\\Metheo.DAL.csproj": {
+    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/Metheo.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DAL\\Metheo.DAL.csproj",
+        "projectUniqueName": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/Metheo.DAL.csproj",
         "projectName": "Metheo.DAL",
-        "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DAL\\Metheo.DAL.csproj",
-        "packagesPath": "C:\\Users\\Clement\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DAL\\obj\\",
+        "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/Metheo.DAL.csproj",
+        "packagesPath": "/home/mirage/.nuget/packages/",
+        "outputPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DAL/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Clement\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/mirage/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj": {
-                "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj"
+              "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {
+                "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj"
               },
-              "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.Tools\\Metheo.Tools.csproj": {
-                "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.Tools\\Metheo.Tools.csproj"
+              "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/Metheo.Tools.csproj": {
+                "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/Metheo.Tools.csproj"
               }
             }
           }
@@ -247,6 +237,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -265,32 +259,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/nix/store/wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj": {
+    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj",
+        "projectUniqueName": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj",
         "projectName": "Metheo.DTO",
-        "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj",
-        "packagesPath": "C:\\Users\\Clement\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\obj\\",
+        "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj",
+        "packagesPath": "/home/mirage/.nuget/packages/",
+        "outputPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Clement\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/mirage/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -329,38 +317,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/nix/store/wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.Tools\\Metheo.Tools.csproj": {
+    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/Metheo.Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.Tools\\Metheo.Tools.csproj",
+        "projectUniqueName": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/Metheo.Tools.csproj",
         "projectName": "Metheo.Tools",
-        "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.Tools\\Metheo.Tools.csproj",
-        "packagesPath": "C:\\Users\\Clement\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.Tools\\obj\\",
+        "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/Metheo.Tools.csproj",
+        "packagesPath": "/home/mirage/.nuget/packages/",
+        "outputPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Clement\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/mirage/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {
+                "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -403,7 +389,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/nix/store/wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

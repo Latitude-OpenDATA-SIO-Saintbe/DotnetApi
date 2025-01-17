@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Metheo.DTO
-build_property.ProjectDir = D:\project\coding\Metheo\DotnetApi-DEV\Metheo.DTO\
+build_property.ProjectDir = /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -9,3 +9,4 @@
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/refint/Metheo.DTO.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/Metheo.DTO.pdb
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/ref/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Debug/net8.0/Metheo.DTO.sourcelink.json

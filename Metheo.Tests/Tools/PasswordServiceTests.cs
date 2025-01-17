@@ -1,7 +1,6 @@
-﻿namespace Metheo.Tests.Tools;
+﻿using Metheo.Tools;
 
-using Xunit;
-using Metheo.Tools;
+namespace Metheo.Tests.Tools;
 
 public class PasswordServiceTests
 {
@@ -16,11 +15,11 @@ public class PasswordServiceTests
     public void VerifyPassword_CorrectPassword_ReturnsTrue()
     {
         // Arrange
-        string inputPassword = "password123";
-        string hashedPassword = BCrypt.Net.BCrypt.HashPassword(inputPassword);
+        var inputPassword = "password123";
+        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(inputPassword);
 
         // Act
-        bool result = _passwordService.VerifyPassword(inputPassword, hashedPassword);
+        var result = _passwordService.VerifyPassword(inputPassword, hashedPassword);
 
         // Assert
         Assert.True(result);
@@ -30,11 +29,11 @@ public class PasswordServiceTests
     public void VerifyPassword_IncorrectPassword_ReturnsFalse()
     {
         // Arrange
-        string inputPassword = "password123";
-        string hashedPassword = BCrypt.Net.BCrypt.HashPassword("differentPassword");
+        var inputPassword = "password123";
+        var hashedPassword = BCrypt.Net.BCrypt.HashPassword("differentPassword");
 
         // Act
-        bool result = _passwordService.VerifyPassword(inputPassword, hashedPassword);
+        var result = _passwordService.VerifyPassword(inputPassword, hashedPassword);
 
         // Assert
         Assert.False(result);
@@ -44,11 +43,11 @@ public class PasswordServiceTests
     public void VerifyPassword_EmptyPassword_ReturnsFalse()
     {
         // Arrange
-        string inputPassword = "";
-        string hashedPassword = BCrypt.Net.BCrypt.HashPassword("password123");
+        var inputPassword = "";
+        var hashedPassword = BCrypt.Net.BCrypt.HashPassword("password123");
 
         // Act
-        bool result = _passwordService.VerifyPassword(inputPassword, hashedPassword);
+        var result = _passwordService.VerifyPassword(inputPassword, hashedPassword);
 
         // Assert
         Assert.False(result);

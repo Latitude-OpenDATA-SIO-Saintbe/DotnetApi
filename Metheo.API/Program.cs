@@ -1,38 +1,60 @@
 using System.Data;
-using Npgsql;
-using Microsoft.Extensions.DependencyInjection;
-using Metheo.DAL;
+using System.Text;
+using AspNetCoreRateLimit;
 using Metheo.BL;
+using Metheo.DAL;
 using Metheo.Tools;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Text;
-using Microsoft.Extensions.Configuration;
-using AspNetCoreRateLimit;
+using Npgsql;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Dapper;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Set up Autofac container
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+
 // Add services to the container
-// Add controller support
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Register PostgreSQL connection for the authentication database (IDbConnection for Auth)
-builder.Services.AddScoped<IDbConnection>(sp =>
-    new NpgsqlConnection(builder.Configuration.GetConnectionString("InvitesConnection")));
-
-// Register PostgreSQL connection for the data access database (IDbConnection for Data)
-builder.Services.AddScoped<IDbConnection>(sp =>
-    new NpgsqlConnection(builder.Configuration.GetConnectionString("PostgresConnection")));
-
-// Register the dependencies (BL, DAL, etc.)
+// Register AuthDataAccess (which uses InvitesConnection)
 builder.Services.AddScoped<IAuthDataAccess, AuthDataAccess>();
-builder.Services.AddScoped<IAuthBusinessLogic, AuthBusinessLogic>();
+
+// Register named database connections using Autofac
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+{
+    // Register InvitesConnection with a named qualifier
+    containerBuilder.Register(c =>
+    {
+        var configuration = c.Resolve<IConfiguration>();
+        var connectionString = configuration.GetConnectionString("InvitesConnection");
+        return new NpgsqlConnection(connectionString);
+    }).Named<IDbConnection>("InvitesConnection");
+
+    // Register PostgresConnection with a named qualifier
+    containerBuilder.Register(c =>
+    {
+        var configuration = c.Resolve<IConfiguration>();
+        var connectionString = configuration.GetConnectionString("PostgresConnection");
+        return new NpgsqlConnection(connectionString);
+    }).Named<IDbConnection>("PostgresConnection");
+});
+
+// Register the other dependencies (BL, etc.)
+builder.Services.AddScoped<IAuthBusinessLogic, AuthService>();
+builder.Services.AddScoped<IDapperWrapper, DapperWrapper>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
 builder.Services.AddScoped<IWeatherService, WeatherService>();
+SqlMapper.AddTypeHandler(new ListDateTimeTypeHandler());
+SqlMapper.AddTypeHandler(new ListFloatNullableTypeHandler());
+SqlMapper.AddTypeHandler(new ListIntNullableTypeHandler());
 
 // Add CORS setup before building the app
 builder.Services.AddCors(options =>
@@ -48,38 +70,34 @@ var jwtIssuer = builder.Configuration.GetSection("Jwt:Issuer").Get<string>();
 var jwtKey = builder.Configuration.GetSection("Jwt:Key").Get<string>();
 
 builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.UseSecurityTokenValidators = true;
-    options.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateIssuer = false,
-        ValidateAudience = false,
-        ValidateLifetime = false,
-        ValidateIssuerSigningKey = false,
-        ValidIssuer = jwtIssuer,
-        ValidAudience = jwtIssuer,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
-    };
-});
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.UseSecurityTokenValidators = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateLifetime = false,
+            ValidateIssuerSigningKey = false,
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtIssuer,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+        };
+    });
 
 builder.Services.AddMemoryCache();
-
 
 // Authorization policies setup
 builder.Services.AddAuthorization(options =>
 {
-    // Role-based policies
     options.AddPolicy("AdminOnly", policy => policy.RequireRole("admin"));
     options.AddPolicy("ManagerOrAdmin", policy => policy.RequireRole("manager", "admin"));
-    options.AddPolicy("ModeratorOrAdmin", policy => policy.RequireRole("moderateur", "admin"));
+    options.AddPolicy("ModeratorOrManagerOrAdmin", policy => policy.RequireRole("moderateur", "manager", "admin"));
     options.AddPolicy("UserOrModeratorOrManagerOrAdmin", policy => policy.RequireRole("user", "moderateur", "manager", "admin"));
-
-    // Permission-based policies
     options.AddPolicy("CanCreateData", policy => policy.RequireClaim("Permission", "create data"));
     options.AddPolicy("CanEditData", policy => policy.RequireClaim("Permission", "edit data"));
     options.AddPolicy("CanDeleteData", policy => policy.RequireClaim("Permission", "delete data"));
@@ -87,16 +105,6 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("CanInvite", policy => policy.RequireClaim("Permission", "can invite"));
     options.AddPolicy("CanEditProfile", policy => policy.RequireClaim("Permission", "edit profile"));
     options.AddPolicy("CanViewDashboard", policy => policy.RequireClaim("Permission", "view dashboard"));
-
-    // Combined role or permission-based policies
-    options.AddPolicy("AdminOrCreateData", policy =>
-        policy.RequireAssertion(context =>
-            context.User.IsInRole("admin") || context.User.HasClaim(c => c.Type == "Permission" && c.Value == "create data")
-        ));
-    options.AddPolicy("ManagerOrEditData", policy =>
-        policy.RequireAssertion(context =>
-            context.User.IsInRole("manager") || context.User.HasClaim(c => c.Type == "Permission" && c.Value == "edit data")
-        ));
 });
 
 // Add AspNetCoreRateLimit services
@@ -127,7 +135,7 @@ builder.Services.AddSwaggerGen(c =>
                     Id = "Bearer"
                 }
             },
-            new string[] {}
+            new string[] { }
         }
     });
 });
@@ -146,6 +154,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
-
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 app.Run();

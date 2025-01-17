@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj": {}
+    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {}
   },
   "projects": {
-    "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj": {
+    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj",
+        "projectUniqueName": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj",
         "projectName": "Metheo.DTO",
-        "projectPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\Metheo.DTO.csproj",
-        "packagesPath": "C:\\Users\\Clement\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\coding\\Metheo\\DotnetApi-DEV\\Metheo.DTO\\obj\\",
+        "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj",
+        "packagesPath": "/home/mirage/.nuget/packages/",
+        "outputPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Clement\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/mirage/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/nix/store/wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

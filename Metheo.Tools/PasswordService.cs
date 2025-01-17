@@ -1,15 +1,14 @@
-namespace Metheo.Tools
-{
-    public interface IPasswordService
-    {
-        bool VerifyPassword(string inputPassword, string hashedPassword);
-    }
+namespace Metheo.Tools;
 
-    public class PasswordService : IPasswordService
+public interface IPasswordService
+{
+    bool VerifyPassword(string inputPassword, string hashedPassword);
+}
+
+public class PasswordService : IPasswordService
+{
+    public bool VerifyPassword(string inputPassword, string hashedPassword)
     {
-        public bool VerifyPassword(string inputPassword, string hashedPassword)
-        {
-            return BCrypt.Net.BCrypt.Verify(inputPassword, hashedPassword);
-        }
+        return BCrypt.Net.BCrypt.Verify(inputPassword, hashedPassword);
     }
 }

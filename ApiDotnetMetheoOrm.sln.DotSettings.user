@@ -1,4 +1,91 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003A0200004D_002Eil_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002Econfig_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003FILViewer_003Fa105b4a31e844e8895058fb1b02b9bc81dea00_003F82_003F14a401e0_003F0200004D_002Eil/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AControllerBase_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002Econfig_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fa105b4a31e844e8895058fb1b02b9bc81dea00_003F2e_003Fce405b70_003FControllerBase_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/home/mirage/.cache/JetBrains/Rider2024.3/resharper-host/temp/Rider/vAny/CoverageData/_ApiDotnetMetheoOrm.-867621253/Snapshot/snapshot.utdcvr</s:String></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExceptionDispatchInfo_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002Econfig_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fbf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc_003FExceptionDispatchInfo_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ANotSupportedException_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002Econfig_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fc6082341f4b545d4abd2b91be12aeb27c2e600_003F27_003Fe287b35a_003FNotSupportedException_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ANullReferenceException_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002Econfig_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fc6082341f4b545d4abd2b91be12aeb27c2e600_003F77_003F92b587c9_003FNullReferenceException_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ANullReferenceException_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002Econfig_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F446b2ff64f15e7f02a4b7c36bd9ab3dca10e16fea4b8126e2fdf4d9f48cfe14_003FNullReferenceException_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/home/mirage/.cache/JetBrains/Rider2024.3/resharper-host/temp/Rider/vAny/CoverageData/_ApiDotnetMetheoOrm.-867621253/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=12f0d97b_002Dfd3c_002D4f15_002Dba99_002D2603e18af75d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AuthDataAccessTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=14828de5_002D1cdb_002D47d8_002Dbc43_002D1680e91b895b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GenerateApiUrl_ReturnsCorrectUrl_WithAllParameters" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=163270c9_002D6aad_002D48d8_002Db6e4_002D9c5f166041b1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from API" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFolder&gt;8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F/d:API&lt;/ProjectFolder&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=38c690f9_002D4097_002D44cf_002Da4a2_002Dfa3db88539c7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Namespace&gt;Metheo.Tests&lt;/Namespace&gt;
+    &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3e9c6978_002D4de6_002D47c5_002Da035_002D696c8ce857b1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GenerateApiUrl_ReturnsCorrectUrl_WithAllParameters #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.Tools.ApiTest.GenerateApiUrl_ReturnsCorrectUrl_WithAllParameters&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5ba85603_002D296f_002D42ea_002D93b2_002Daa5c9f37f07c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WeatherControllerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5ec0dbcb_002D7007_002D4e8e_002Da90c_002Ddf9902630a46/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WeatherRepositoryTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.DAL.WeatherRepositoryTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=72d308ea_002D3028_002D4963_002D9f64_002Da157290d336a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Namespace&gt;Metheo.Tests&lt;/Namespace&gt;
+    &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7bb0703a_002D5231_002D440a_002D8bbc_002D11530cb64eed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from API #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFolder&gt;8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F/d:API&lt;/ProjectFolder&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8610c05d_002D6108_002D4e3e_002Da71a_002D1ea98995f86f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;Metheo.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8cd4b40e_002D60b7_002D4695_002D9b2a_002D296a3e4907f0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AuthControllerTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9ba71733_002Db243_002D440e_002Daa19_002D8c3a9db092b2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ApiTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.Tools.ApiTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.BL.WeatherServiceTests.GetWeatherData_ReturnsGlobalWeatherDataWithCategory&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.API.AuthControllerTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.API.WeatherControllerTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.BL.AuthServiceTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.DAL.AuthDataAccessTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.DAL.WeatherRepositoryTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.Tools.CalculTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.Tools.DateUtilsTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.Tools.PasswordServiceTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.Tools.PositionTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.Tools.TokenServiceTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.BL.WeatherServiceTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9f1ac37c_002Df6ef_002D4332_002D8b32_002D7c86191bb484/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;Metheo.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a49ed5ce_002Ddfdf_002D4eab_002Dab74_002D20b014245e22/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetWeatherDataByPositionAsync_ReturnsWeatherData_WhenCategoriesProvided" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.DAL.WeatherRepositoryTests.GetWeatherDataByPositionAsync_ReturnsWeatherData_WhenCategoriesProvided&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d6779520_002Da693_002D407a_002Da291_002D62fd6cc725f3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AuthControllerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.API.AuthControllerTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8217F7AB-D306-4AFB-B4D3-BDB810E5FA0F::net8.0::Metheo.Tests.Tools.ApiTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eb1a316c_002Db4ed_002D414e_002Dba7b_002D954f81f99593/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from API #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f951d126_002D43fd_002D46e0_002D8ce1_002De0974befd690/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Namespace&gt;Metheo.Tests&lt;/Namespace&gt;
+    &lt;Project Location="/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tests" Presentation="&amp;lt;Metheo.Tests&amp;gt;" /&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

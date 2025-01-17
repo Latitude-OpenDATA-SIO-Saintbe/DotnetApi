@@ -65,3 +65,6 @@
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Microsoft.DotNet.PlatformAbstractions.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/obj/Debug/net8.0/Metheo.API.sourcelink.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Autofac.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Autofac.Extensions.DependencyInjection.dll
