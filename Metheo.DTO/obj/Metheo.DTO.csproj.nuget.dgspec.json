@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {}
+    "/app/Metheo.DTO/Metheo.DTO.csproj": {}
   },
   "projects": {
-    "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj": {
+    "/app/Metheo.DTO/Metheo.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj",
+        "projectUniqueName": "/app/Metheo.DTO/Metheo.DTO.csproj",
         "projectName": "Metheo.DTO",
-        "projectPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/Metheo.DTO.csproj",
-        "packagesPath": "/home/mirage/.nuget/packages/",
-        "outputPath": "/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/",
+        "projectPath": "/app/Metheo.DTO/Metheo.DTO.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/app/Metheo.DTO/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/mirage/.nuget/NuGet/NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/nix/store/wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.405/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

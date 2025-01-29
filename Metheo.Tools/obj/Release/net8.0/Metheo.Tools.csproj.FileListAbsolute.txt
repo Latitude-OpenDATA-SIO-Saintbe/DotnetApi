@@ -1,0 +1,32 @@
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Release/net8.0/Metheo.Tools.deps.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Release/net8.0/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Release/net8.0/Metheo.Tools.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Release/net8.0/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Release/net8.0/Metheo.DTO.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.csproj.AssemblyReference.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.GeneratedMSBuildEditorConfig.editorconfig
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.AssemblyInfoInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.AssemblyInfo.cs
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.csproj.CoreCompileInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.sourcelink.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.T.4466A0C3.Up2Date
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/refint/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Release/net8.0/ref/Metheo.Tools.dll
+/app/Metheo.Tools/bin/Release/net8.0/Metheo.Tools.deps.json
+/app/Metheo.Tools/bin/Release/net8.0/Metheo.Tools.dll
+/app/Metheo.Tools/bin/Release/net8.0/Metheo.Tools.pdb
+/app/Metheo.Tools/bin/Release/net8.0/Metheo.DTO.dll
+/app/Metheo.Tools/bin/Release/net8.0/Metheo.DTO.pdb
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.csproj.AssemblyReference.cache
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.GeneratedMSBuildEditorConfig.editorconfig
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.AssemblyInfoInputs.cache
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.AssemblyInfo.cs
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.csproj.CoreCompileInputs.cache
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.sourcelink.json
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.T.4466A0C3.Up2Date
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.dll
+/app/Metheo.Tools/obj/Release/net8.0/refint/Metheo.Tools.dll
+/app/Metheo.Tools/obj/Release/net8.0/Metheo.Tools.pdb
+/app/Metheo.Tools/obj/Release/net8.0/ref/Metheo.Tools.dll

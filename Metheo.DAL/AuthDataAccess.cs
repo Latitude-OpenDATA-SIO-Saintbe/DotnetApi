@@ -1,7 +1,6 @@
 ﻿using System.Data;
 using Autofac;
 using Metheo.DTO;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Metheo.DAL;
 

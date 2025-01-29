@@ -1,4 +1,5 @@
 namespace Metheo.Tools;
+using BCrypt.Net;
 
 public interface IPasswordService
 {
@@ -9,6 +10,6 @@ public class PasswordService : IPasswordService
 {
     public bool VerifyPassword(string inputPassword, string hashedPassword)
     {
-        return BCrypt.Net.BCrypt.Verify(inputPassword, hashedPassword);
+        return BCrypt.Verify(inputPassword, hashedPassword);
     }
 }
