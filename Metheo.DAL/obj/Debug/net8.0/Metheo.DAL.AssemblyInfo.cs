@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Metheo.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b86077457576118ecad3d4ed3adb257ffba7a960")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e62ca4ce53cc90612f432b80efc74e426a662788")]
 [assembly: System.Reflection.AssemblyProductAttribute("Metheo.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Metheo.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 using System.IO.Compression;
 using System.Net;
+using System.Text;
 using System.Text.Json;
 using Metheo.BL;
 using Microsoft.AspNetCore.Authorization;
@@ -53,17 +54,15 @@ public class WeatherController : ControllerBase
         try
         {
             var weatherData = await _weatherService.GetWeatherData(dateRange, latitude, longitude, category);
-
-            // Compress the data
-            using var memoryStream = new MemoryStream();
-            using (var gzipStream = new GZipStream(memoryStream, CompressionMode.Compress, leaveOpen: true))
-            {
-                await JsonSerializer.SerializeAsync(gzipStream, weatherData);
-            }
-
-            // offset
-            memoryStream.Seek(0, SeekOrigin.Begin);
-            return File(memoryStream.ToArray(), "application/gzip");
+            // compress data
+            var json = JsonSerializer.Serialize(weatherData);
+            var bytes = Encoding.UTF8.GetBytes(json);
+            using var compressedStream = new MemoryStream();
+            using var zipStream = new GZipStream(compressedStream, CompressionMode.Compress);
+            zipStream.Write(bytes, 0, bytes.Length);
+            zipStream.Close();
+            var compressedBytes = compressedStream.ToArray();
+            return File(compressedBytes, "application/gzip");
         }
         catch (ArgumentException ex)
         {
