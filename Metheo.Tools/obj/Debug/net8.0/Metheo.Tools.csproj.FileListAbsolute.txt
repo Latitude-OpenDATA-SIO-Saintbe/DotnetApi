@@ -1,0 +1,16 @@
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.Tools.GeneratedMSBuildEditorConfig.editorconfig
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.Tools.AssemblyInfoInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.Tools.AssemblyInfo.cs
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.Tools.csproj.CoreCompileInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.Tools.csproj.AssemblyReference.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Debug/net8.0/Metheo.Tools.deps.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Debug/net8.0/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Debug/net8.0/Metheo.Tools.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/refint/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.Tools.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/ref/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.Tools.sourcelink.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Debug/net8.0/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/bin/Debug/net8.0/Metheo.DTO.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.Tools/obj/Debug/net8.0/Metheo.T.4466A0C3.Up2Date

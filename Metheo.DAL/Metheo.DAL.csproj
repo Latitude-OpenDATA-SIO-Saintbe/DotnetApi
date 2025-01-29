@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Dapper" Version="2.1.35"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Metheo.DTO\Metheo.DTO.csproj"/>
+        <ProjectReference Include="..\Metheo.Tools\Metheo.Tools.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Autofac">
+          <HintPath>..\..\..\..\..\..\..\..\.nuget\packages\autofac\8.2.0\lib\net8.0\Autofac.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+          <HintPath>..\..\..\..\..\..\..\..\..\..\nix\store\wlknwwx8f79lq8n07b0xh7ddjrrk191h-dotnet-sdk-8.0.404\share\dotnet\shared\Microsoft.AspNetCore.App\8.0.11\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+            <HintPath>..\..\..\..\..\..\..\..\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>

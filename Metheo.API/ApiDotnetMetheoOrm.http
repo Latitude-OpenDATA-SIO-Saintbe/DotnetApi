@@ -1,0 +1,6 @@
+@ApiDotnetMetheoOrm_HostAddress = http://localhost:5151
+
+GET {{ApiDotnetMetheoOrm_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
