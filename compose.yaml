@@ -1,0 +1,49 @@
+﻿version: '3.8'
+
+services:
+  dotnet_api-build:
+    image: mcr.microsoft.com/dotnet/sdk:8.0
+    container_name: dotnet_api-build
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: >
+      sh -c "dotnet restore Metheo.API/Metheo.API.csproj && \
+             dotnet publish Metheo.API/Metheo.API.csproj -c Release -o /app/publish /p:UseAppHost=false"
+    healthcheck:
+      test: ["CMD", "dotnet", "Metheo.API.dll", "--version"]
+      interval: 30s
+      retries: 5
+      start_period: 10s
+      timeout: 20s
+
+  dotnet_api:
+    image: mcr.microsoft.com/dotnet/aspnet:8.0-alpine
+    container_name: dotnet_api
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+
+      # JWT settings
+      JWT__Key: "hm7T5BIVNhUiDbOlIPAX7RaSNJtcJ6uMm9a5OMtuVMM79"
+      JWT__Issuer: "metheodatalatitude.com"
+      JWT__Audience: "metheodatalatitude.com"
+
+      # Connection strings
+      CONNECTIONSTRINGS__PostgresConnection: "Host=localhost;Port=5432;Database=laravel;Username=user;Password=password"
+      CONNECTIONSTRINGS__InvitesConnection: "Host=localhost;Port=5432;Database=invites;Username=user;Password=password"
+
+      # IpRateLimiting settings
+      IPRATELIMITING__EnableEndpointRateLimiting: "true"
+      IPRATELIMITING__StackBlockedRequests: "true"
+      IPRATELIMITING__RealTime: "true"
+      IPRATELIMITING__GeneralRules__0__Endpoint: "*"
+      IPRATELIMITING__GeneralRules__0__Period: "1m"
+      IPRATELIMITING__GeneralRules__0__Limit: "20"
+    ports:
+      - "5000:8080"
+    depends_on:
+      - dotnet_api-build
+    command: ["dotnet", "/app/publish/Metheo.API.dll"]

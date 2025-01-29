@@ -18,5 +18,3 @@
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Debug/net8.0/Metheo.BL.pdb
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Debug/net8.0/ref/Metheo.BL.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Debug/net8.0/Metheo.BL.sourcelink.json
-/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Debug/net8.0/Autofac.dll
-/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Debug/net8.0/Autofac.xml

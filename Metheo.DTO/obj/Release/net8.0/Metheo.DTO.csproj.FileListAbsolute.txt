@@ -1,0 +1,24 @@
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/bin/Release/net8.0/Metheo.DTO.deps.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/bin/Release/net8.0/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/bin/Release/net8.0/Metheo.DTO.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.GeneratedMSBuildEditorConfig.editorconfig
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.AssemblyInfoInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.AssemblyInfo.cs
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.csproj.CoreCompileInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.sourcelink.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/refint/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.DTO/obj/Release/net8.0/ref/Metheo.DTO.dll
+/app/Metheo.DTO/bin/Release/net8.0/Metheo.DTO.deps.json
+/app/Metheo.DTO/bin/Release/net8.0/Metheo.DTO.dll
+/app/Metheo.DTO/bin/Release/net8.0/Metheo.DTO.pdb
+/app/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.GeneratedMSBuildEditorConfig.editorconfig
+/app/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.AssemblyInfoInputs.cache
+/app/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.AssemblyInfo.cs
+/app/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.csproj.CoreCompileInputs.cache
+/app/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.sourcelink.json
+/app/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.dll
+/app/Metheo.DTO/obj/Release/net8.0/refint/Metheo.DTO.dll
+/app/Metheo.DTO/obj/Release/net8.0/Metheo.DTO.pdb
+/app/Metheo.DTO/obj/Release/net8.0/ref/Metheo.DTO.dll

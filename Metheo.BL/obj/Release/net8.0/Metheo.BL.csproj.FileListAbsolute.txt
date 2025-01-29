@@ -1,0 +1,42 @@
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.BL.deps.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.BL.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.BL.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.DAL.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.DTO.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.Tools.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Autofac.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.DTO.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.DAL.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Metheo.Tools.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/bin/Release/net8.0/Autofac.xml
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.csproj.AssemblyReference.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.GeneratedMSBuildEditorConfig.editorconfig
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.AssemblyInfoInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.AssemblyInfo.cs
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.csproj.CoreCompileInputs.cache
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.sourcelink.json
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.csproj.Up2Date
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/refint/Metheo.BL.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/Metheo.BL.pdb
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.BL/obj/Release/net8.0/ref/Metheo.BL.dll
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.dll
+/app/Metheo.BL/obj/Release/net8.0/refint/Metheo.BL.dll
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.pdb
+/app/Metheo.BL/bin/Release/net8.0/Metheo.BL.deps.json
+/app/Metheo.BL/bin/Release/net8.0/Metheo.BL.dll
+/app/Metheo.BL/bin/Release/net8.0/Metheo.BL.pdb
+/app/Metheo.BL/bin/Release/net8.0/Metheo.DAL.dll
+/app/Metheo.BL/bin/Release/net8.0/Metheo.DTO.dll
+/app/Metheo.BL/bin/Release/net8.0/Metheo.Tools.dll
+/app/Metheo.BL/bin/Release/net8.0/Metheo.DTO.pdb
+/app/Metheo.BL/bin/Release/net8.0/Metheo.DAL.pdb
+/app/Metheo.BL/bin/Release/net8.0/Metheo.Tools.pdb
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.csproj.AssemblyReference.cache
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.GeneratedMSBuildEditorConfig.editorconfig
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.AssemblyInfoInputs.cache
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.AssemblyInfo.cs
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.csproj.CoreCompileInputs.cache
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.sourcelink.json
+/app/Metheo.BL/obj/Release/net8.0/Metheo.BL.csproj.Up2Date
+/app/Metheo.BL/obj/Release/net8.0/ref/Metheo.BL.dll

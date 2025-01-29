@@ -32,7 +32,7 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
     containerBuilder.Register(c =>
     {
         var configuration = c.Resolve<IConfiguration>();
-        var connectionString = configuration.GetConnectionString("InvitesConnection");
+        var connectionString = "Host=localhost;Port=5432;Database=invites;Username=user;Password=password";
         return new NpgsqlConnection(connectionString);
     }).Named<IDbConnection>("InvitesConnection");
 
@@ -40,7 +40,7 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
     containerBuilder.Register(c =>
     {
         var configuration = c.Resolve<IConfiguration>();
-        var connectionString = configuration.GetConnectionString("PostgresConnection");
+        var connectionString = "Host=localhost;Port=5432;Database=laravel;Username=user;Password=password";
         return new NpgsqlConnection(connectionString);
     }).Named<IDbConnection>("PostgresConnection");
 });
@@ -66,8 +66,12 @@ builder.Services.AddCors(options =>
 });
 
 // JWT Authentication setup
-var jwtIssuer = builder.Configuration.GetSection("Jwt:Issuer").Get<string>();
-var jwtKey = builder.Configuration.GetSection("Jwt:Key").Get<string>();
+var jwtIssuer = "metheodatalatitude.com";
+var jwtKey = "hm7T5BIVNhUiDbOlIPAX7RaSNJtcJ6uMm9a5OMtuVMM79";
+
+// write in console jwtIssuer and jwtKey
+Console.WriteLine(jwtIssuer);
+Console.WriteLine(jwtKey);
 
 builder.Services.AddAuthentication(options =>
     {

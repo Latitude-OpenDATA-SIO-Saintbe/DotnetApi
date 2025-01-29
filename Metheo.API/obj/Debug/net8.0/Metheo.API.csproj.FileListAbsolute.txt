@@ -5,7 +5,6 @@
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Metheo.API.runtimeconfig.json
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Metheo.API.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Metheo.API.pdb
-/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/BCrypt.Net-Next.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Dapper.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
@@ -68,3 +67,5 @@
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/obj/Debug/net8.0/Metheo.API.sourcelink.json
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Autofac.dll
 /home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Autofac.Extensions.DependencyInjection.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/mirage/Documents/project/program language/school/tech/MG/ApiDotnetMetheoOrm/Metheo.API/bin/Debug/net8.0/BCrypt.Net-Next.dll

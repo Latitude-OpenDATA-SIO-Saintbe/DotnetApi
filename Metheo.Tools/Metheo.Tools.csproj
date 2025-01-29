@@ -7,12 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3"/>
-        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.0"/>
+      <ProjectReference Include="..\Metheo.DTO\Metheo.DTO.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Metheo.DTO\Metheo.DTO.csproj" />
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.1" />
     </ItemGroup>
 
 </Project>
